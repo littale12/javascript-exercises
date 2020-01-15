@@ -1,10 +1,15 @@
-const removeFromArray = function() {
-    for (let i = 0; i < arguments[0].length; i++) {
-        if (arguments[1..arguments.length].includes(arguments[0][i]) == true) {
-            arguments[0].splice(i,1)
+const removeFromArray = function(...args) {
+    let array = args[0]
+    let rem = args.slice(1)
+    for (let i = 0; i < args[0].length; i++) {
+        if (rem.includes(array[i])) {
+            array.splice(i,1)
         };
     };
-    return arguments[0]
+    return array
 };
+
+
+
 
 module.exports = removeFromArray

@@ -1,5 +1,7 @@
 const removeFromArray = require('./removeFromArray')
 
+function test() { console.log(arguments); }; test();
+
 describe('removeFromArray', function() {
   it('removes a single value', function() {
     expect(removeFromArray([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
